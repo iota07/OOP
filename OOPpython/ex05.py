@@ -3,12 +3,12 @@ class Beverage:
         """
         Initialize a Beverage object with color, price, and temperature.
         """
-        self.color = color
-        self.price = self.validate_price(price)
-        self.temperature = temperature
+        self._color = color
+        self._price = self._validate_price(price)
+        self._temperature = temperature
 
     @staticmethod
-    def validate_price(price):
+    def _validate_price(price):
         """
         Validate that the price is a positive number.
         """
@@ -21,9 +21,9 @@ class Beverage:
         """
         Get information about the beverage.
         """
-        return f"This beverage is {self.temperature} and {self.color}"
+        return f"This beverage is {self._temperature} and {self._color}"
 
 
-cola = Beverage(color="black", price=2.0)
+cola = Beverage(color="black", price=3.5)
 
 print(cola.get_info())
