@@ -1,5 +1,5 @@
 class Beverage:
-    def __init__(self, color, price, temperature="cold"):
+    def __init__(self, color: str, price: float, temperature: str="cold"):
         """
         Initialize a Beverage object with color, price, and temperature.
         """
@@ -16,7 +16,7 @@ class Beverage:
         else:
             raise ValueError("Price must be a positive number")
 
-    def get_info(self):
+    def get_info(self) -> str:
         """
         Get information about the beverage.
         """
